@@ -1,50 +1,91 @@
-# Credit Card Fraud Detection
 Credit Card Fraud Detection Using Logistic Regression
 Overview
-This repository contains a machine learning model to detect credit card fraud using logistic regression. The primary objective is to build a reliable model that can identify fraudulent transactions and help prevent financial losses.
+This project aims to detect fraudulent credit card transactions using logistic regression. The dataset contains credit card transactions made by European cardholders in September 2013, and the goal is to build a model that can effectively classify transactions as legitimate or fraudulent.
 
-Features
-Data Preprocessing: Handling missing values, scaling, and encoding categorical variables.
+Dataset Information
+The dataset includes 31 columns:
 
-Exploratory Data Analysis (EDA): Visualizing data distributions, correlations, and identifying patterns.
+Time: Number of seconds elapsed between this transaction and the first transaction in the dataset
 
-Model Training: Implementing logistic regression for binary classification.
+V1 to V28: Principal components obtained from PCA
 
-Model Evaluation: Assessing model performance using metrics such as accuracy, precision, recall, and F1-score.
+Amount: Transaction amount
 
-Imbalanced Data Handling: Techniques like SMOTE and class weighting to address class imbalance.
+Class: Target variable (0 for legitimate, 1 for fraudulent)
 
-Installation
-To get started, clone the repository and install the required dependencies:
+Project Structure
+creditcard.csv: The dataset file.
+
+credit_card_fraud_detection.ipynb: Jupyter Notebook with the complete workflow.
+
+Requirements
+Python 3.x
+
+pandas
+
+numpy
+
+scikit-learn
+
+matplotlib
+
+seaborn
+
+Install the required packages using:
 
 bash
-git clone https://github.com/RAGUL1531/Credit-Card-Fraud-Detection
-cd credit-card-fraud-detection
-pip install -r requirements.txt
+pip install pandas numpy scikit-learn matplotlib seaborn
+Steps to Execute
+Import Modules:
+
+Import necessary libraries for data manipulation, visualization, and model building.
+
+Load the Dataset:
+
+Load the dataset into a pandas DataFrame and inspect the first few rows.
+
+Data Preprocessing:
+
+Check for missing values and handle them using the forward fill method.
+
+Exploratory Data Analysis (EDA):
+
+Visualize the distribution of the target variable (Class) and other features.
+
+Model Training:
+
+Split the data into training and testing sets.
+
+Train a logistic regression model on the training data.
+
+Model Evaluation:
+
+Evaluate model performance using accuracy and classification report on both training and testing sets.
+
 Usage
-Data Preparation: Place your dataset in the data folder.
-
-Run Preprocessing: Execute the preprocessing script to clean and transform the data.
+Clone the repository:
 
 bash
-python preprocessing.py
-Train Model: Run the training script to build and evaluate the logistic regression model.
+git clone https://github.com/RAGUL1531/Credit-Card-Fraud-Detection/blob/main/Requirements.txt
+cd credit-card-fraud-detection
+Open and run the Jupyter Notebook:
 
 bash
-python train_model.py
-Dataset
-The dataset used in this project is sourced from Kaggle's Credit Card Fraud Detection dataset. It contains transactions made by credit cards in September 2013 by European cardholders.
+jupyter notebook credit_card_fraud_detection.ipynb
+Results
+The logistic regression model achieved the following accuracy:
 
-Contributing
-We welcome contributions to improve this project. Please submit a pull request or create an issue for any bug reports, feature requests, or improvements.
+Training Accuracy: 96.66%
+
+Testing Accuracy: 89.52%
+
+Conclusion
+The logistic regression model performed well in detecting fraudulent transactions, demonstrating its effectiveness in binary classification tasks. Further improvements can include trying different algorithms or hyperparameter tuning for even better results.
 
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 Acknowledgements
-Kaggle for providing the dataset.
+The credit card fraud detection dataset is provided by Kaggle.
 
-All contributors and open-source libraries used in this project.
-
-Contact
-If you have any questions or suggestions, feel free to reach out at [ragul2005328@gmail.com].
+Special thanks to the open-source community for providing the tools and libraries used in this project.
